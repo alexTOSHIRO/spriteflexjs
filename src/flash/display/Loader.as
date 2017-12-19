@@ -1,10 +1,9 @@
 package flash.display
 {
+	import flash.events.Event;
 	import flash.net.URLRequest;
 	import flash.system.LoaderContext;
 	import flash.utils.ByteArray;
-	import flash.errors.*;
-	import flash.events.*;
 	
 	public class Loader extends DisplayObjectContainer
 	{

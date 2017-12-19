@@ -32,7 +32,7 @@ package
 		{
 			//addChild(debugTf);
 			debugTf.autoSize = "left";
-			CONFIG::js_only{
+			COMPILE::JS{
 			SpriteFlexjs.autoSize = true;
 			}
 			var p:Object = stage.loaderInfo.parameters;

@@ -1,7 +1,7 @@
 package flash.utils.__js
 {
-	public function setIntervalJS(closure:Function, delay:Number):int
+	public function setIntervalJS(closure:Function, delay:Number = 0):int
 	{
-		return setInterval(closure,delay);
+		return window["setInterval"](closure,delay);
 	}
 }

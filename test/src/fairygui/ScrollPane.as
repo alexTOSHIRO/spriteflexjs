@@ -474,7 +474,7 @@ package fairygui
 			this.setPercX(_xPerc - getDeltaX(_scrollSpeed*speed), ani);
 		}
 		
-		public function scrollRight(speed:Number=1, ani:Boolean=false):void　
+		public function scrollRight(speed:Number=1, ani:Boolean=false):void
 		{
 			this.setPercX(_xPerc + getDeltaX(_scrollSpeed*speed), ani);
 		}
@@ -1470,9 +1470,9 @@ package fairygui
 		{
 			_scrollBarVisible = val && _viewWidth>0 && _viewHeight>0;
 			if(_vtScrollBar)
-				_vtScrollBar.displayObject.visible = _scrollBarVisible &&　!_vScrollNone;
+				_vtScrollBar.displayObject.visible = _scrollBarVisible && !_vScrollNone;
 			if(_hzScrollBar)
-				_hzScrollBar.displayObject.visible = _scrollBarVisible &&　!_hScrollNone;
+				_hzScrollBar.displayObject.visible = _scrollBarVisible && !_hScrollNone;
 		}
 		
 		private function __tweenUpdate():void

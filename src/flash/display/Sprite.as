@@ -1,45 +1,41 @@
 package flash.display
 {
 	import flash.events.Event;
-	import flash.events.EventDispatcher;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	
 	
 	public class Sprite extends DisplayObjectContainer
 	{
 		public var graphics:Graphics = new Graphics;
-		private var tempPos:Point;
 		
 		public function Sprite()
 		{
-			super();
-			
 			DisplayObject.initStage = Stage.instance;
-			init();
+			super();
+			__init();
 		}
 		
-		public function get buttonMode():Boolean  { return false }
+		public function get buttonMode():Boolean { return false; }
 		
-		public function set buttonMode(param1:Boolean):void  {/**/ }
+		public function set buttonMode(param1:Boolean):void {/**/ }
 		
-		public function startDrag(param1:Boolean = false, param2:Rectangle = null):void  {/**/ }
+		public function startDrag(param1:Boolean = false, param2:Rectangle = null):void {/**/ }
 		
-		public function stopDrag():void  {/**/ }
+		public function stopDrag():void {/**/ }
 		
-		public function startTouchDrag(param1:int, param2:Boolean = false, param3:Rectangle = null):void  {/**/ }
+		public function startTouchDrag(param1:int, param2:Boolean = false, param3:Rectangle = null):void {/**/ }
 		
-		public function stopTouchDrag(param1:int):void  {/**/ }
+		public function stopTouchDrag(param1:int):void {/**/ }
 		
-		public function get dropTarget():DisplayObject  { return null }
+		public function get dropTarget():DisplayObject { return null; }
 		
-		public function get hitArea():Sprite  { return null }
+		public function get hitArea():Sprite { return null; }
 		
-		public function set hitArea(param1:Sprite):void  {/**/ }
+		public function set hitArea(param1:Sprite):void {/**/ }
 		
-		public function get useHandCursor():Boolean  { return false }
+		public function get useHandCursor():Boolean { return false; }
 		
-		public function set useHandCursor(param1:Boolean):void  {/**/ }
+		public function set useHandCursor(param1:Boolean):void {/**/ }
 		
 		//public function get soundTransform() : SoundTransform;
 		
@@ -61,7 +57,7 @@ package flash.display
 		
 		override protected function __doMouse(e:flash.events.MouseEvent):DisplayObject 
 		{
-			if (/*stage &&*/ mouseEnabled&&visible) {
+			if (/*stage &&*/ mouseEnabled && visible) {
 				var obj:DisplayObject = super.__doMouse(e);
 				if (obj) {
 					return obj;

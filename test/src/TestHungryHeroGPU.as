@@ -10,7 +10,7 @@ package
 		
 		public function TestHungryHeroGPU() 
 		{
-			CONFIG::js_only{
+			COMPILE::JS{
 				SpriteFlexjs.renderer = new WebGLRenderer;
 				SpriteFlexjs.wmode = "gpu batch";
 			}

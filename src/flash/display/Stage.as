@@ -1,5 +1,8 @@
 package flash.display
 {
+	import flash.__native.BaseRenderer;
+	import flash.utils.getTimer;
+	import flash.utils.setTimeout;
 	import flash.__native.GLCanvasRenderingContext2D;
 	import flash.__native.WebGLRenderer;
 	import flash.display.InteractiveObject;
@@ -10,7 +13,6 @@ package flash.display
 	import flash.geom.Transform;
 	import flash.accessibility.AccessibilityProperties;
 	import flash.accessibility.AccessibilityImplementation;
-	import flash.events.Event;
 	import flash.text.TextSnapshot;
 	import flash.ui.ContextMenu;
 	import flash.display.StageAlign;
@@ -244,8 +246,8 @@ package flash.display
 			
 			window.addEventListener("resize", window_resize, false);
 			window.addEventListener("orientationchange", window_resize, false);
-			setTimeout(__update);
 			
+			__update(ctx);
 			_instance = this;
 		}
 		
@@ -277,19 +279,18 @@ package flash.display
 			dispatchEvent(new Event(Event.RESIZE));
 		}
 		
-		private function __update():void {
-			if(_stageWidth != SpriteFlexjs.stageWidth||
-			_stageHeight != SpriteFlexjs.stageHeight){
+		override public function __update(ctx:CanvasRenderingContext2D):void {
+			if(_stageWidth != SpriteFlexjs.stageWidth || _stageHeight != SpriteFlexjs.stageHeight) {
 				window_resize(null);
 			}
 			
 			//http://codetheory.in/controlling-the-frame-rate-with-requestanimationframe/	
 			/*requestAnimationFrameHander = */SpriteFlexjs.requestAnimationFrame.call(window,__update);
-			//var now:Number = getTimer();
-			//var interval:Number = Math.ceil(1000/frameRate);
-			//var delta:Number = now - lastUpdateTime;
-			//if (delta >= interval) {
-			//	lastUpdateTime = now - (delta % interval);
+			var now:Number = getTimer();
+			var interval:Number = Math.ceil(1000/frameRate);
+			var delta:Number = now - lastUpdateTime;
+			if (delta >= interval) {
+				lastUpdateTime = now - (delta % interval);
 				if (needSendMouseMove) {
 					dispatchEvent(new MouseEvent(MouseEvent.MOUSE_MOVE, true, false, _mouseX, _mouseY));
 					needSendMouseMove = false;
@@ -299,7 +300,7 @@ package flash.display
 					needSendTouchMove = false;
 				}
 				dispatchEvent(new Event(Event.ENTER_FRAME));
-			//}
+			}
 		}
 		
 		public function set accessibilityImplementation (value:AccessibilityImplementation):void
@@ -1580,7 +1581,7 @@ package flash.display
 		}
 		
 		/**
-		 * @flexjsignorecoercion CanvasRenderingContext2D
+		 * @royaleignorecoercion CanvasRenderingContext2D
 		 */
 		public function get ctx():CanvasRenderingContext2D
 		{
@@ -1594,6 +1595,7 @@ package flash.display
 					SpriteFlexjs.renderer = new WebGLRenderer;
 				}else{
 					_ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+					SpriteFlexjs.renderer = new BaseRenderer();
 				}
 			}
 			return _ctx;

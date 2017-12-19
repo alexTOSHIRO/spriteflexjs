@@ -1,5 +1,7 @@
 package flash.utils
 {
+	import flash.utils.__js.clearIntervalJS;
+	import flash.utils.__js.setIntervalJS;
 	import flash.events.EventDispatcher;
 	import flash.events.TimerEvent;
 
@@ -166,7 +168,7 @@ package flash.utils
 		 */
 		public function reset():void
 		{
-			clearInterval(_interval);
+			clearIntervalJS(_interval);
 			_delayTime = _delay;
 			_running = false;
 			_complete = false;
@@ -182,7 +184,7 @@ package flash.utils
 		public function start():void
 		{
 			_startTime = new Date().getMilliseconds();
-			_interval = setInterval(timerComplete, _delayTime);
+			_interval = setIntervalJS(timerComplete, _delayTime);
 			_running = true;
 		}
 
@@ -195,7 +197,7 @@ package flash.utils
 		 */
 		public function stop():void
 		{
-			clearInterval(_interval);
+			clearIntervalJS(_interval);
 			_stopTime = new Date().getMilliseconds();
 			_delayTime -= (_stopTime - _startTime);
 			_running = false;

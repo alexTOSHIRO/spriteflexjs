@@ -1,12 +1,12 @@
 package flash.events
 {
-	import flash.net.*;
 	
 	[Event(name = "deactivate", type = "flash.events.Event")]
 	[Event(name = "activate", type = "flash.events.Event")]
 	public class EventDispatcher extends Object implements IEventDispatcher
 	{
-		private var listeners:Object = {};
+		private var _listeners:Object;
+		public function get listeners():Object { return _listeners = this._listeners || {}; }
 		
 		public function EventDispatcher(target:IEventDispatcher = null)
 		{

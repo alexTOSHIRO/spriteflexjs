@@ -131,7 +131,6 @@ package  flash.geom{
 			break;
 			default:
 			throw new Error("Error, Column " + column + " out of bounds [0, ..., 3]");
-			break;
 			}
 		}
 		
@@ -209,7 +208,6 @@ package  flash.geom{
 			break;
 			default:
 			throw new Error("Error, Row " + ("" + row) + " out of bounds [0, ..., 3]");
-			break;
 			}
 		}
 		

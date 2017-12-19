@@ -54,7 +54,7 @@ package flash.display
 			return this._type;
 		}
 		
-		public function set type(value:String):*
+		public function set type(value:String):void
 		{
 			/*if(value != GradientType.LINEAR && value != GradientType.RADIAL)
 			   {
@@ -68,7 +68,7 @@ package flash.display
 			return this._spreadMethod;
 		}
 		
-		public function set spreadMethod(value:String):*
+		public function set spreadMethod(value:String):void
 		{
 			/*if(value != "none" && value != SpreadMethod.PAD && value != SpreadMethod.REFLECT && value != SpreadMethod.REPEAT)
 			   {
@@ -82,7 +82,7 @@ package flash.display
 			return this._interpolationMethod;
 		}
 		
-		public function set interpolationMethod(value:String):*
+		public function set interpolationMethod(value:String):void
 		{
 			/* if(value != InterpolationMethod.LINEAR_RGB && value != InterpolationMethod.RGB)
 			   {
@@ -92,7 +92,7 @@ package flash.display
 		}
 		
 		/**
-		 * @flexjsignorecoercion String
+		 * @royaleignorecoercion String
 		 */
 		public function draw(ctx:CanvasRenderingContext2D,colorTransform:ColorTransform):void
 		{

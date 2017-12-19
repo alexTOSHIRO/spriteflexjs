@@ -63,7 +63,7 @@ package flash.display
 			return this._joints;
 		}
 		
-		public function set joints(value:String):*
+		public function set joints(value:String):void
 		{
 			/*if(value != JointStyle.BEVEL && value != JointStyle.MITER && value != JointStyle.ROUND)
 			   {
@@ -87,7 +87,7 @@ package flash.display
 		}
 		
 		/**
-		 * @flexjsignorecoercion String
+		 * @royaleignorecoercion String
 		 */
 		public function draw(ctx:CanvasRenderingContext2D,colorTransform:ColorTransform):void
 		{
@@ -108,8 +108,8 @@ package flash.display
 		}
 		
 		/**
-		 * @flexjsignorecoercion String
-		 * @flexjsignorecoercion flash.display.GraphicsSolidFill
+		 * @royaleignorecoercion String
+		 * @royaleignorecoercion flash.display.GraphicsSolidFill
 		 */
 		public function gldraw(ctx:GLCanvasRenderingContext2D, colorTransform:ColorTransform):void{
 			if (isNaN(thickness))

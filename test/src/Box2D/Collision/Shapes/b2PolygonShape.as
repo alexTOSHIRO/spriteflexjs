@@ -588,7 +588,6 @@ public class b2PolygonShape extends b2Shape
 				//Completely dry
 				return 0;
 			}
-			break;
 			case 1:
 			if (intoIndex == -1)
 			{
@@ -622,7 +621,7 @@ public class b2PolygonShape extends b2Shape
 		{
 			i = (i + 1) % m_vertexCount;
 			if(i == outoIndex2)
-				p3 = outoVec
+				p3 = outoVec;
 			else
 				p3 = m_vertices[i];
 			

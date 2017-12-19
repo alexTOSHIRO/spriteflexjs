@@ -1,11 +1,11 @@
-package bunnymark{
+package bunnymark
+{
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Loader;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.geom.Point;
 	import flash.net.URLRequest;
 	import flash.text.TextField;
 
@@ -86,24 +86,21 @@ package bunnymark{
 			btn.addEventListener(MouseEvent.CLICK, counter_click);
 		}
 
-		public function counter_click(e:Event):void
-		{
-			var i:int = 100000;
+		public function counter_click(e:Event):void {
+			var i:int = 1000;
 			numBunnies += i;
-			trace("numBunies",numBunnies);
-			while(i-->0){
+			trace("numBunies", numBunnies);
+			while(i-- > 0) {
 				var bunny:Bunny = new Bunny();
 				bunny.display = new Bitmap(bunnyAsset);
-				
+
 				tilesheet.addChild(bunny.display);
-				//bunny .position = new Point();
+				// bunny .position = new Point();
 				bunny.speedX = Math.random() * 5;
 				bunny.speedY = (Math.random() * 5) - 2.5;
-				bunny.display.scaleX =
-				bunny.display.scaleY =
-				 0.3 + Math.random();
-				bunny.display.rotation = 120*(15 - Math.random() * 30);
-				bunnies.push (bunny);
+				bunny.display.scaleX = bunny.display.scaleY = 0.3 + Math.random();
+				bunny.display.rotation = 120 * (15 - Math.random() * 30);
+				bunnies.push(bunny);
 			}
 
 			stage_resize(null);

@@ -20,7 +20,7 @@ package flash.geom
 		}
 		
 		public function get matrix():Matrix  { 
-			return _matrix 
+			return _matrix;
 		}
 		
 		public function set matrix(v:Matrix):void  {
@@ -70,19 +70,19 @@ package flash.geom
 			return _concatenatedColorTransform;
 		}
 		
-		public function get pixelBounds():Rectangle  { return null }
+		public function get pixelBounds():Rectangle  { return null; }
 		
 		private function ctor(displayObject:DisplayObject):void  {
 			this.displayObject = displayObject;
 		}
 		
-		public function get matrix3D():Matrix3D  { return null }
+		public function get matrix3D():Matrix3D  { return null; }
 		
-		public function set matrix3D(param1:Matrix3D):*  {/**/ }
+		public function set matrix3D(param1:Matrix3D):void  {/**/ }
 		
-		public function getRelativeMatrix3D(param1:DisplayObject):Matrix3D  { return null }
+		public function getRelativeMatrix3D(param1:DisplayObject):Matrix3D  { return null; }
 		
-		public function get perspectiveProjection():PerspectiveProjection  { return null }
+		public function get perspectiveProjection():PerspectiveProjection  { return null; }
 		
 		public function set perspectiveProjection(param1:PerspectiveProjection):void  {/**/ }
 		public function get invMatrix():Matrix

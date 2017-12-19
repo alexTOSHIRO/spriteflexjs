@@ -45,7 +45,7 @@ package flash.display
 			return this._winding;
 		}
 		
-		public function set winding(value:String):*
+		public function set winding(value:String):void
 		{
 			/*if(value != GraphicsPathWinding.EVEN_ODD && value != GraphicsPathWinding.NON_ZERO)
 			   {
@@ -160,7 +160,7 @@ package flash.display
 		}
 		
 		/**
-		 * @flexjsignorecoercion flash.__native.GLCanvasRenderingContext2D
+		 * @royaleignorecoercion flash.__native.GLCanvasRenderingContext2D
 		 */
 		public function gldraw(ctx:GLCanvasRenderingContext2D, colorTransform:ColorTransform):void{
 			ctx.drawPath(this, colorTransform);

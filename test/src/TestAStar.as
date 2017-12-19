@@ -23,7 +23,7 @@ package
 		public function TestAStar() 
 		{
 			var d:Number = .5;
-			//CONFIG::js_only{
+			//COMPILE::JS{
 			//SpriteFlexjs.wmode = "gpu batch";
 			//SpriteFlexjs.renderer = new WebGLRenderer;
 			//d = .2;

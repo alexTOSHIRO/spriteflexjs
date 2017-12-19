@@ -43,7 +43,7 @@ package spriteflexjs
 			if (stage!=null) {
 				text +=  stage.frameRate;
 			}
-			CONFIG::js_only{
+			COMPILE::JS{
 				text += "\ndc  : " + SpriteFlexjs.drawCounter;
 				if (SpriteFlexjs.batDrawCounter>0){
 					text += "\nbdc : " + SpriteFlexjs.batDrawCounter;

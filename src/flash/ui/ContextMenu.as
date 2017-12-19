@@ -4,14 +4,13 @@ package flash.ui
 	import flash.ui.ContextMenuBuiltInItems;
 	import flash.net.URLRequest;
 	import flash.ui.ContextMenuClipboardItems;
-	import flash.ui.ContextMenu;
 
 	/**
 	 * Dispatched when a user first generates a 
 	 * context menu but before the contents of the context menu are displayed.
 	 * @eventType	flash.events.ContextMenuEvent.MENU_SELECT
 	 */
-	[Event(name="menuSelect", type="flash.events.ContextMenuEvent")] 
+	[Event(name="menuSelect", type="flash.events.ContextMenuEvent")]
 
 	/**
 	 * The ContextMenu class provides control over the items displayed in context menus.

@@ -1,6 +1,6 @@
 package 
 {
-	CONFIG::js_only{
+	COMPILE::JS{
 	import flash.__native.WebGLRenderer;
 	}
 	import flash.display.Bitmap;
@@ -31,7 +31,7 @@ package
 		private var th:Number;
 		public function TestTMX() 
 		{
-			CONFIG::js_only{
+			COMPILE::JS{
 			SpriteFlexjs.wmode = "gpu batch";
 			SpriteFlexjs.renderer = new WebGLRenderer;
 			}

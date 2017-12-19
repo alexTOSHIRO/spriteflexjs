@@ -6,6 +6,8 @@ package
 	import PIXI.Texture;
 	import PIXI.WebGLRenderer;
 	import bunnymark.TileTestPixi;
+	
+	
 	/**
 	 * ...
 	 * @author lizhi
@@ -15,7 +17,8 @@ package
 		private var stage:Container;
 		private var renderer:SystemRenderer;
 		private var s:Sprite;
-		private var tt:TileTestPixi
+		private var tt:TileTestPixi;
+		
 		public function PixiTest() 
 		{
 			renderer = new WebGLRenderer(480,640);

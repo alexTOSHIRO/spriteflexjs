@@ -1,4 +1,5 @@
 package bunnymark{
+	import flash.events.Event;
 	import PIXI.Sprite;
 	import PIXI.Texture;
 
@@ -22,7 +23,7 @@ package bunnymark{
 		private var drawList:Array;
 		public function TileTestPixi() 
 		{
-			super ();
+			super();
 
 			gravity = 0.5;
 			incBunnies = 100;
@@ -35,7 +36,7 @@ package bunnymark{
 			
 			bunnies = new Array();
 			drawList = new Array();
-			tilesheet = new Sprite//new Tilesheet(bunnyAsset);
+			tilesheet = new Sprite();//new Tilesheet(bunnyAsset);
 			//tilesheet.mouseChildren = tilesheet.mouseEnabled = false;
 			addChild(tilesheet);
 			//tilesheet.addTileRect(
@@ -49,10 +50,10 @@ package bunnymark{
 
 		public function counter_click(e:Event):void
 		{
-			var i:int = 100000;
+			var i:int = 1000;
 			numBunnies += i;
 			trace("numBunies",numBunnies);
-			while(i-->0){
+			while(i-- > 0){
 				var bunny:BunnyPixi = new BunnyPixi();
 				bunny.display = new Sprite(bunnyAsset);
 				

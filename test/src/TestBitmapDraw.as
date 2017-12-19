@@ -19,7 +19,7 @@ package
 		private var matr:Matrix = new Matrix;
 		public function TestBitmapDraw() 
 		{
-			CONFIG::js_only{
+			COMPILE::JS{
 				SpriteFlexjs.wmode = "gpu batch";
 			}
 			var tf:TextField = new TextField;
@@ -58,10 +58,10 @@ package
 		}
 		
 		private function draw(tf:TextField, bmd:BitmapData,matr:Matrix=null):void{
-			CONFIG::as_only{
+			COMPILE::SWF{
 				bmd.draw(tf,matr);
 			}
-			CONFIG::js_only{
+			COMPILE::JS{
 				tf.__draw(bmd.ctx,new Matrix);
 			}
 		}

@@ -1639,7 +1639,7 @@ package fairygui
 				return;
 			
 			var xx:Number = evt.stageX - sGlobalDragStart.x + sGlobalRect.x;
-			var yy:Number = evt.stageY - sGlobalDragStart.y　+ sGlobalRect.y;
+			var yy:Number = evt.stageY - sGlobalDragStart.y + sGlobalRect.y;
 			
 			if (_dragBounds!=null)
 			{

@@ -65,9 +65,11 @@ package
 			var first:Boolean = true;
 			for each(var mesh:Mesh in meshs) {
 				ctx.setProgram(mesh.program);
-				var mmatr:Matrix3D = mesh.mmatr;
-				CONFIG::as_only {
-					if (first) {
+				var mmatr : Matrix3D = mesh.mmatr;
+				COMPILE::SWF
+				{
+					if (first)
+					{
 						first = false;
 						ctx.setTextureAt(0, mesh.texture);
 						ctx.setVertexBufferAt(0, mesh.posBuffer, 0, Context3DVertexBufferFormat.FLOAT_3);
@@ -83,8 +85,10 @@ package
 					}
 					ctx.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, mmatr,true);
 				}
-				CONFIG::js_only {
-					if (first) {
+				COMPILE::JS
+				{
+					if (first)
+					{
 						first = false;
 						ctx.setTextureAtGL("uSampler", 0, mesh.texture);
 						ctx.setVertexBufferAtGL("aVertexPosition", mesh.posBuffer, 0, Context3DVertexBufferFormat.FLOAT_3);
@@ -150,14 +154,14 @@ package
 			texture.uploadFromBitmapData(bmd);
 			
 			//init shader
-			CONFIG::js_only{
+			COMPILE::JS{
 				var vb:ByteArray = new ByteArray;
 				vb.writeUTFBytes( vcode);
 				var fb:ByteArray = new ByteArray;
 				fb.writeUTFBytes( fcode);
 			}
 			
-			CONFIG::as_only{
+			COMPILE::SWF{
 				vcode = 
 				<![CDATA[
 					m44 vt0 va0 vc0

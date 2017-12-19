@@ -2,8 +2,8 @@ package flash.display
 {
 	import flash.events.MouseEvent;
 	import flash.geom.Matrix;
-	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	
 	
 	public class Bitmap extends DisplayObject
 	{
@@ -20,21 +20,21 @@ package flash.display
 			_bitmapData = bitmapData;
 		}
 		
-		public function get pixelSnapping():String  { return null }
+		public function get pixelSnapping():String  { return null; }
 		
 		public function set pixelSnapping(param1:String):void
 		{
 		
 		}
 		
-		public function get smoothing():Boolean  { return false }
+		public function get smoothing():Boolean  { return false; }
 		
 		public function set smoothing(param1:Boolean):void
 		{
 		
 		}
 		
-		public function get bitmapData():BitmapData  { return _bitmapData }
+		public function get bitmapData():BitmapData  { return _bitmapData; }
 		
 		public function set bitmapData(param1:BitmapData):void
 		{

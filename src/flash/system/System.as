@@ -1,6 +1,6 @@
 package flash.system
 {
-	[(methods = "auto", cls = "SystemClass", construct = "none")]
+	[native(methods = "auto", cls = "SystemClass", construct = "none")]
 	
 	public final class System extends Object
 	{
@@ -105,6 +105,8 @@ package flash.system
 		
 		}
 	
-		//public static function disposeXML(param1:XML) : void;
+		public static function disposeXML(param1:XML) : void
+		{
+		}
 	}
 }

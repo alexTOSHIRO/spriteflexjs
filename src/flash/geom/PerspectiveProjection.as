@@ -18,7 +18,7 @@ package flash.geom
       
      public function get projectionCenter() : Point{return null}
       
-     public function set projectionCenter(param1:Point) : *{return null}
+     public function set projectionCenter(param1:Point) : void{}
       
      public function get focalLength() : Number{return 0}
       

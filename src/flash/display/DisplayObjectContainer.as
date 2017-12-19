@@ -3,7 +3,6 @@ package flash.display
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
-	import flash.events.Event;
 	
 	public class DisplayObjectContainer extends InteractiveObject
 	{
@@ -152,7 +151,7 @@ package flash.display
 		override public function __update(ctx:CanvasRenderingContext2D):void
 		{
 			if (/*stage && */visible){
-				var len:int = children.length
+				var len:int = children.length;
 				for (var i:int = 0; i < len;i++ ){
 					var c:DisplayObject = children[i];
 					c.__update(ctx);
@@ -172,7 +171,7 @@ package flash.display
 		
 		override protected function __doMouse(e:flash.events.MouseEvent):DisplayObject 
 		{
-			if (mouseEnabled&&mouseChildren&&visible) {
+			if ((mouseEnabled || mouseChildren) && visible) {
 				for (var i:int = children.length - 1; i >= 0; i-- ) {
 					var obj:DisplayObject = children[i].__doMouse(e);
 					if (obj) {

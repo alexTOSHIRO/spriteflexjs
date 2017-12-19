@@ -24,7 +24,7 @@ package
 		private var tf:TextField;
 		public function TestGraphics() 
 		{
-			CONFIG::js_only{
+			COMPILE::JS{
 				//SpriteFlexjs.wmode = "gpu batch";
 				//SpriteFlexjs.renderer = new WebGLRenderer;
 			}

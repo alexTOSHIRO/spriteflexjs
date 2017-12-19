@@ -146,7 +146,7 @@ package fairygui
 					newBmd = ToolSet.tileBitmap(_bmdSource, _bmdSource.rect, w, h);
 			}
 			
-			if(newBmd!=null &&　_flip!=FlipType.None)
+			if(newBmd!=null && _flip!=FlipType.None)
 			{
 				var mat:Matrix = new Matrix();
 				var a:int=1,b:int=1;

@@ -4,8 +4,12 @@ package flash.media
 	import flash.net.URLRequest;
 	import flash.utils.ByteArray;
 	
-	[Event(name = "progress", type = "flash.events.ProgressEvent")][Event(name = "open", type = "flash.events.Event")][Event(name = "ioError", type = "flash.events.IOErrorEvent")][Event(name = "id3", type = "flash.events.Event")][Event(name = "complete", type = "flash.events.Event")][Event(name = "sampleData", type = "flash.events.SampleDataEvent")]
-	
+	[Event(name = "progress", type = "flash.events.ProgressEvent")]
+	[Event(name = "open", type = "flash.events.Event")]
+	[Event(name = "ioError", type = "flash.events.IOErrorEvent")]
+	[Event(name = "id3", type = "flash.events.Event")]
+	[Event(name = "complete", type = "flash.events.Event")]
+	[Event(name = "sampleData", type = "flash.events.SampleDataEvent")]
 	public class Sound extends EventDispatcher
 	{
 		public static var sounds:Array = [];
