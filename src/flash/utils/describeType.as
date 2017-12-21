@@ -1,9 +1,11 @@
-// Generated from frameworks/libs/player/16.0/playerglobal.swc
-// Breakpoints are not supported
 package flash.utils
 {
 public function describeType(value:*):XML
 {
+	var xml:XML = new XML();
+	var object:Object = value["prototype"]["ROYALE_REFLECTION_INFO"]();
+	
 	return null;
 }
 }
+

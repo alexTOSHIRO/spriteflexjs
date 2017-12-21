@@ -412,7 +412,9 @@ package flash.display
 
 		public function get contentsScaleFactor ():Number { return _contentsScaleFactor; }
 
-		public function set contextMenu (value:ContextMenu):void { _contextMenu = value; }
+		override public function set contextMenu(value:ContextMenu):void {
+			_contextMenu = value;
+		}
 
 		public function get displayContextInfo ():String { return _displayContextInfo; }
 

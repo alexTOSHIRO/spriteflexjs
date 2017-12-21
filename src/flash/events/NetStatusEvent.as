@@ -20,7 +20,7 @@ public class NetStatusEvent extends Event
 	{
 	}
 
-	public function toString():String
+	override public function toString():String
 	{
 		return null;
 	}

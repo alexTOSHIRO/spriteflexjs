@@ -2,6 +2,6 @@ package flash.utils
 {
 	public function getDefinitionByName(param1:String):Object
 	{
-		return null
+		return eval(param1);
 	}
 }

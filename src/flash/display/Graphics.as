@@ -39,21 +39,21 @@ package flash.display
 		{
 			endStrokAndFill();
 			lastFill = new GraphicsSolidFill(color, alpha);
-			graphicsData.push(lastFill);
+			graphicsData.push(lastFill as IGraphicsData);
 		}
 		
 		public function beginGradientFill(type:String, colors:Array, alphas:Array, ratios:Array, matrix:* = null, spreadMethod:String = "pad", interpolationMethod:String = "rgb", focalPointRatio:Number = 0):void
 		{
 			endStrokAndFill();
 			lastFill = new GraphicsGradientFill(type, colors, alphas, ratios, matrix, spreadMethod, interpolationMethod, focalPointRatio);
-			graphicsData.push(lastFill);
+			graphicsData.push(lastFill as IGraphicsData);
 		}
 		
 		public function beginBitmapFill(bitmap:BitmapData, matrix:Matrix = null, repeat:Boolean = true, smooth:Boolean = false):void
 		{
 			endStrokAndFill();
 			lastFill = new GraphicsBitmapFill(bitmap, matrix, repeat, smooth);
-			graphicsData.push(lastFill);
+			graphicsData.push(lastFill as IGraphicsData);
 		}
 		
 		public function endStrokAndFill():void

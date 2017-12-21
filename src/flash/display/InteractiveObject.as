@@ -1,5 +1,6 @@
 package flash.display
 {
+	import flash.ui.ContextMenu;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
 	
@@ -18,7 +19,7 @@ package flash.display
 		
 		public function get tabIndex():int { return 0; }
 		
-		public function set tabIndex(param1:int):void  {/**/ }
+		public function set tabIndex(param1:int):void {/**/ }
 		
 		public function get focusRect():Object { return null; }
 		
@@ -26,11 +27,11 @@ package flash.display
 		
 		public function get mouseEnabled():Boolean { return _mouseEnabled; }
 		
-		public function set mouseEnabled(v:Boolean):void  { _mouseEnabled = v; }
+		public function set mouseEnabled(v:Boolean):void { _mouseEnabled = v; }
 		
-		public function get doubleClickEnabled():Boolean  { return _doubleClickEnabled; }
+		public function get doubleClickEnabled():Boolean { return _doubleClickEnabled; }
 		
-		public function set doubleClickEnabled(v:Boolean):void  { _doubleClickEnabled = v; }
+		public function set doubleClickEnabled(v:Boolean):void { _doubleClickEnabled = v; }
 		
 		// public function get accessibilityImplementation() : AccessibilityImplementation;
 		
@@ -38,16 +39,16 @@ package flash.display
 		
 		public function get softKeyboardInputAreaOfInterest():Rectangle { return null; }
 		
-		public function set softKeyboardInputAreaOfInterest(param1:Rectangle):void  {/**/ }
+		public function set softKeyboardInputAreaOfInterest(param1:Rectangle):void {/**/ }
 		
-		public function get needsSoftKeyboard():Boolean  { return false; }
+		public function get needsSoftKeyboard():Boolean { return false; }
 		
 		public function set needsSoftKeyboard(param1:Boolean):void  {/**/ }
 		
-		public function requestSoftKeyboard():Boolean  { return false; }
+		public function requestSoftKeyboard():Boolean { return false; }
 	
-		//public function get contextMenu() : ContextMenu;
+		public function get contextMenu() : ContextMenu { return null; }
 	
-		//public function set contextMenu(param1:ContextMenu) : void;
+		public function set contextMenu(param1:ContextMenu) : void {}
 	}
 }

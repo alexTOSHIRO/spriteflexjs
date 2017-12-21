@@ -17,7 +17,7 @@ public class AsyncErrorEvent extends ErrorEvent
 		super(type, bubbles, cancelable);
 	}
 
-	public function toString():String
+	override public function toString():String
 	{
 		return null;
 	}
